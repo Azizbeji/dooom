@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e30ddd2aae.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Your Professional Shop</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>WELCOME TO MY SHOP</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="products">
+        <div class="product-card" data-id="1">
+          <img
+            src="https://fnamerica.com/wp-content/uploads/2016/12/SCAR-17S-FDE_031.jpg"
+            alt="Product 1"
+            width="300PX"
+            height="100PX"
+          />
+          <br>
+          <span class="product-name">SCAR-RL</span>
+          <span class="product-price">$2000</span><br>
+          <button class="cart-btn" onclick="addToCart(1)">Add to Cart</button>
+          <div>
+          <i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i>
+          <span class="a+">0</span>
+          <i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i>
+        </div>
+          <div>
+            <i class="fa-regular fa-heart fa-xl" style="color: #0a0a0a"></i>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="2">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/68/PEO_M4_Carbine_RAS_M68_CCO.png"
+            width="300PX"
+            height="100PX"
+            alt="Product 2"
+          /><br//>
+          <span class="product-name">M4A1</span>
+          <span class="product-price">$3099</span><br>
+          <button class="cart-btn" onclick="addToCart(2)">Add to Cart</button>
+          <div>
+          <i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i>
+          <span class="a+">0</span>
+          <i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i>
+        </div>
+          <div>
+            <i class="fa-regular fa-heart fa-xl" style="color: #0a0a0a"></i>
+          </div>
+        </div>
+
+        <div class="product-card" data-id="3">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Product 3"
+          /><br>
+          <span class="product-name">AK47</span>
+          <span class="product-price">$2099</span><br>
+          <button class="cart-btn" onclick="addToCart(3)">Add to Cart</button>
+          <div>
+          <i class="fa-solid fa-plus fa-xl" style="color: #000000;"></i>
+          <span class="a+">0</span>
+          <i class="fa-solid fa-minus fa-xl" style="color: #000000;"></i>
+        </div>
+          <div>
+            <i class="fa-regular fa-heart fa-xl" style="color: #0a0a0a"></i>
+          </div>
+        </div>
+      </section>
+
+      <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+      </section>
+      <section>
+        <h2>total of price</h2>
+        <input type="text" id="text" />
+      </section>
+    </main>
+
+    <script src="scrpit.js"></script>
+  </body>
+</html>
